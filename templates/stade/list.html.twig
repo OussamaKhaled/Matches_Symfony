@@ -1,0 +1,28 @@
+
+
+<center><table border="1" width="30%" style="border: orangered; text-align: center">
+<caption><h1>Liste des Stades</h1></caption>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Ville</th>
+    <th colspan="2">Editer</th>
+    
+   
+  </tr>
+  {% for class in stade %}
+  <tr>
+    <td>{{ class.id }}</td>
+    <td>{{ class.nom }}</td>
+     <td>{{ class.ville }}</td>
+     <td><a href="{{path('delete_stade',{id:class.id})}}">Supprimer</a></td>
+    
+    
+  </tr>
+  
+  
+  {% endfor %}
+  
+</table>
+
+</center>

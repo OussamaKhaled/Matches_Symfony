@@ -1,0 +1,30 @@
+
+
+<center><table border="1" width="30%" style="border: orangered; text-align: center">
+<caption><h1>Liste des Matches</h1></caption>
+  <tr>
+    <th>Num Matche</th>
+    <th>Date</th>
+    <th>Nb Spec</th>
+    <th colspan="2">Stade</th>
+    
+   
+  </tr>
+  {% for class in matche %}
+  <tr>
+    <td>{{ class.numeroMatche }}</td>
+    <td>{{ class.dateM|date('Y-m-d H:i:s')}}</td>
+    
+     <td>{{ class.nbSpectateurs }}</td>
+     <td>{{ class.stade.nom }}</td>
+     
+    
+    
+  </tr>
+  
+  
+  {% endfor %}
+  
+</table>
+<a href="{{path('add_match')}}"> Ajouter un Matche</a>
+</center>
